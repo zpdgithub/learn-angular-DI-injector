@@ -21,6 +21,17 @@ class MyService {
   `
 })
 export class AppComponent {
+  myService: MyService;
+
+  constructor() {
+    const injector: any = ReflectiveInjector.resolveAndCreate([MyService]); // 创建一个新的注入器
+    this.myService = injector.get(MyService); // 注入器给我们一个MyService的实例
+    console.log('Same instance?', this.myService === injector.get(MyService));
+  }
+
+  invokeService(): void {
+    console.log('MyService returned', this.myService.getValue());
+  }
 }
 
 
