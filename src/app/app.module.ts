@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Component } from '@angular/core';
+import {
+  Component,
+  ReflectiveInjector
+} from '@angular/core';
 
 /*
  * The injectable service
