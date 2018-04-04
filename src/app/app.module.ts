@@ -13,7 +13,9 @@ class MyService {
 
 @Component({
   selector: 'app-root',
-  templateUrl: `root`
+  template: `
+  <button (click)="invokeService()">Get Value</button>
+  `
 })
 export class AppComponent {
 }
